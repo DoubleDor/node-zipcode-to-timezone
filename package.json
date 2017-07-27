@@ -1,6 +1,6 @@
 {
   "name": "zipcode-to-timezone",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Converts a timezone to a zipcode",
   "main": "index.js",
   "scripts": {

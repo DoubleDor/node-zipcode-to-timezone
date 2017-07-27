@@ -9,10 +9,10 @@
  * of the MIT license.  See the LICENSE file for details.
  */
 
-var _ = require( 'underscore' ),
-    assert = require( 'chai' ).assert;
+var _ = require('underscore'),
+    assert = require('chai').assert;
 
-var zipcode_to_timezone = require( '../' );
+var zipcode_to_timezone = require('../');
 
 var test_zipcodes = {
     '21114': 'America/New_York',
@@ -22,12 +22,13 @@ var test_zipcodes = {
     '00000': null
 };
 
-describe( 'zipcode_to_timezone.lookup', function() {
+describe('zipcode_to_timezone.lookup', function () {
     _
-        .each( test_zipcodes, function( tz, zipcode ) {
-            it( zipcode + '->' + tz, function() {
-                var found_tz = zipcode_to_timezone.lookup( zipcode );
-                assert.equal( found_tz, tz );
-            } );
-        } );
-} );
+        .each(test_zipcodes, function (tz, zipcode) {
+            it(zipcode + '->' + tz, function () {
+                var found_tz = zipcode_to_timezone.lookup(zipcode);
+                var zone = found_tz ? found_tz.zone : null;
+                assert.equal(zone, tz);
+            });
+        });
+});
