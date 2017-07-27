@@ -27,7 +27,7 @@ describe( 'zipcode_to_timezone.lookup', function() {
         .each( test_zipcodes, function( tz, zipcode ) {
             it( zipcode + '->' + tz, function() {
                 var found_tz = zipcode_to_timezone.lookup( zipcode );
-                assert.equal( found_tz, tz );
+                assert.equal( found_tz.zone, tz );
             } );
         } );
 } );
