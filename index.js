@@ -36,7 +36,8 @@ var TIMEZONE_MAP = Object.freeze ({
   21: "America/Juneau",
   22: "America/Kentucky/Monticello",
   23: "America/North_Dakota/Center",
-  24: "America/Yakutat"
+  24: "America/Yakutat",
+	25: "Pacific/Guam"
 });
 /**
  * Looks up zipcode in zipcodes.json
